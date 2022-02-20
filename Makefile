@@ -12,6 +12,10 @@ PNETCDFINCS=-I$(SNETCDF)/include
 PNETCDFLIBS=-L$(SNETCDF)/lib -lpnetcdf
 
 serial:
-	${FC} serial.F90 -o serial ${FFLAGS} ${SNETCDFINCS} ${SNETCDFLIBS}
-	./serial
+	${FC} hello_serial.F90 -o hello_serial ${FFLAGS} ${SNETCDFINCS} ${SNETCDFLIBS}
+	./hello_serial
+
+mpi:
+	${FC} hello_mpi.F90 -o hello_mpi ${FFLAGS}
+	srun -n 2 ./hello_mpi
 
