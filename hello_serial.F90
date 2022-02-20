@@ -1,4 +1,4 @@
-program serial
+program hello_serial
   use netcdf
   implicit none
   
@@ -47,5 +47,5 @@ contains
       stop "Stopped"
     end if
   end subroutine check 
-end program serial
+end program hello_serial
 
