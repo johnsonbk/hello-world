@@ -21,6 +21,5 @@ mpi:
 
 parallel:
 	${FC} hello_parallel.F90 -o hello_parallel ${FFLAGS} ${PNETCDFINCS} ${PNETCDFLIBS}
-	sbatch ./run_hello_parallel.sh
-
+	srun -n 4 ./hello_parallel
 
